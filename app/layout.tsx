@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Outfit } from 'next/font/google'
+import { Space_Grotesk } from 'next/font/google'
 
 export const metadata: Metadata = {
 	title: '',
 	description: '',
 }
 
-const outfit = Outfit({ weight: ['400', '700'], subsets: ['latin'] })
+const spaceGrotesk = Space_Grotesk({ weight: ['400','600', '700'], subsets: ['latin'] })
 
 export default function RootLayout({
 	children,
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={outfit.className}>{children}</body>
+			<body className={spaceGrotesk.className}>{children}</body>
 		</html>
 	)
 }

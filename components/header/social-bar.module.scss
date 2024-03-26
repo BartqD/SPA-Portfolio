@@ -1,0 +1,25 @@
+.social-bar {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-weight: bold;
+	padding: 3.9em 16.5em;
+
+	&__name {
+		display: flex;
+		font-size: 3.2rem;
+	}
+	&__icons {
+		display: flex;
+		gap: 3.2rem;
+		cursor: pointer;
+		svg path {
+			transition: fill .3s linear;
+		}
+
+		svg:hover path {
+			fill: var(--green);
+		}
+	}
+}
