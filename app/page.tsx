@@ -1,15 +1,22 @@
 import { Fragment } from 'react'
 import classes from './page.module.scss'
+import SocialBar from '@/components/header/social-bar'
+import AboutMe from '@/components/header/about-me'
 
 export default function Home() {
 	return (
 		<Fragment>
-			<main>
+			<header className={`${classes.header} ${classes.wrapper} `}>
+				<SocialBar></SocialBar>
+				<AboutMe></AboutMe>
+				<hr></hr>
+			</header>
+			<main className={`${classes.header} ${classes.wrapper} `}>
+				<section>
+
+				</section>
 			</main>
 			<footer>
-				<div className={classes.attribution}>
-					Challenge by <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>Frontend Mentor</a>. Coded by <a href='https://github.com/BartqD'>Bartosz</a>.
-				</div>
 			</footer>
 		</Fragment>
 	)
