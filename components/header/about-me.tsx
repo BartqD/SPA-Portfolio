@@ -48,8 +48,8 @@ const AboutMe: React.FC = () => {
 				</motion.div>
 				<div className={classes['about-me__content']}>
 					<motion.h1 variants={containerVariants} initial='hidden' animate='visible'>
-						Nice to meet you! <br />
-						<motion.span variants={letterVariants}>I</motion.span>
+						Nice to meet you!
+						<motion.span variants={letterVariants}> I</motion.span>
 						<motion.span variants={letterVariants}>{`'`}</motion.span>
 						<motion.span variants={letterVariants}>m</motion.span>
 						<motion.span variants={letterVariants}> </motion.span>
