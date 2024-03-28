@@ -1,0 +1,56 @@
+.skills{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    margin: 2rem 1.4rem;
+
+    &__title{
+        width: 100%;
+        font-size: 4rem;
+        font-weight: bold;
+        
+    }
+}
+
+.skill-items {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+	height: 60.4rem;
+	width: 100%;
+
+ 
+
+    &__name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: 3.2rem;
+        line-height: 4rem;
+        font-weight: 700;
+        color: var(--white);
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        margin-bottom: 1rem;
+        svg {
+            path{
+                fill: var(--green);
+            }
+        }
+    }
+    &__experience{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: var(--white);
+        letter-spacing: -1px;
+        margin-bottom: 1rem;
+
+    }
+}
