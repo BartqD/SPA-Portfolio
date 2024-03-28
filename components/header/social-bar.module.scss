@@ -42,6 +42,39 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		font-weight: bold;
+		margin: 2.9rem 3rem;
+
+		&__name {
+			display: flex;
+			font-size: 3.2rem;
+		}
+		&__icons {
+			display: flex;
+			margin-top: 0;
+			gap: 3.2rem;
+			margin-right: 2rem;
+			cursor: pointer;
+			a {
+				padding: 0.5em;
+			}
+			svg path {
+				transition: fill 0.3s linear;
+			}
+
+			svg:hover path {
+				fill: var(--green);
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.social-bar {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		font-weight: bold;
 		margin: 3.9rem 16.5rem;
 
 		&__name {
@@ -67,3 +100,8 @@
 		}
 	}
 }
+
+
+
+  
+ 

@@ -135,3 +135,77 @@
 		}
 	}
 }
+
+@media(min-width: 768px){
+	.about-me {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		margin: 12.7rem 16.5rem;
+		position: relative;
+
+		&__rings {
+			position: absolute;
+			top: -1rem;
+			left: -25rem;
+			z-index: 1;
+		}
+
+		&__my-image {
+			position: absolute;
+			top: -21rem;
+			right: 0;
+			width: 44.5rem;
+			height: 72rem;
+			z-index: -1;
+		}
+
+		&__content {
+			text-align: left;
+			h1 {
+				text-align: left;
+				font-size: var(--heading-xl);
+				letter-spacing: -2.5px;
+				line-height: 8.8rem;
+				span {
+					border-bottom: 6px solid var(--green);
+				}
+				span:nth-child(1),
+				span:nth-child(2),
+				span:nth-child(3),
+				span:nth-child(4),
+				span:nth-child(5) {
+					border-bottom: none;
+				}
+			}
+			p{
+				text-align: left;
+			}
+		}
+
+		&__description {
+			width: 44.5rem;
+			margin-top: 4.3rem;
+			margin-bottom: 6.6rem;
+			line-height: 2.8rem;
+			font-size: 1.8rem;
+			text-align: left;
+		}
+
+		&__contact {
+			font-size: 1.6rem;
+			font-weight: bold;
+			letter-spacing: 0.229rem;
+			line-height: 2.6rem;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: var(--white);
+			border-bottom: 2px solid var(--green);
+			transition: color 0.3s ease-in;
+		}
+		&__contact:hover {
+			color: var(--green);
+		}
+	}
+
+}
