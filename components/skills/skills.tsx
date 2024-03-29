@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import classes from './skills.module.scss';
 import { FaHtml5 } from "react-icons/fa";
@@ -7,6 +8,7 @@ import { SiNextdotjs } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { FaSass } from "react-icons/fa";
 import Image from "next/image";
+import { motion } from 'framer-motion'
 
 
 interface SkillProps {
@@ -27,7 +29,8 @@ const skills: SkillProps[] = [
 const SkillListSection: React.FC = () => {
   return (
     <section id='skills' className={classes.skills}>
-        <div className={classes['skills__ring']}><Image  src={'/images/pattern-rings.svg'} width={530} height={80} alt='rings pattern' /></div>
+        <motion.div animate={{ scale: [1, 1.1, 1] }}
+					transition={{ duration: 10, repeat: Infinity, ease: 'linear' }} className={classes['skills__ring']}><Image  src={'/images/pattern-rings.svg'} width={530} height={80} alt='rings pattern' /></motion.div>
       <h2 className={classes['skills__title']}>My Skills:</h2>
       <article className={classes["skill-items"]}>
         {skills.map((skill, index) => (

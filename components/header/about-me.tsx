@@ -1,11 +1,10 @@
 'use client'
-
 import { Fragment } from 'react'
 import React from 'react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import classes from './about-me.module.scss'
 import Image from 'next/image'
+import PageLink from '../ui/link'
 
 const AboutMe: React.FC = () => {
 	const containerVariants: { [key: string]: any } = {
@@ -74,9 +73,7 @@ const AboutMe: React.FC = () => {
 					</p>
 				</div>
 
-				<Link className={classes['about-me__contact']} href='#'>
-					contact me
-				</Link>
+				<PageLink href={'#'}>contact me</PageLink>
 			</div>
 		</Fragment>
 	)

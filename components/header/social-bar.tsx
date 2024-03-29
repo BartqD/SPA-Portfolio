@@ -12,7 +12,7 @@ const SocialBar: React.FC = () => {
 			<div className={classes['social-bar']}>
 				<p className={classes['social-bar__name']}>bartoszdrozdek</p>
 				<div className={classes['social-bar__icons']}>
-					<Link href={gitHubUrl} target='_blank' aria-label="GitHub">
+					<Link href={gitHubUrl} target='_blank' aria-label='GitHub'>
 						<svg xmlns='http://www.w3.org/2000/svg' width='25' height='24'>
 							<path
 								fill='#FFF'
@@ -21,7 +21,7 @@ const SocialBar: React.FC = () => {
 							/>
 						</svg>
 					</Link>
-					<Link href={facebookUrl} target='_blank' aria-label="Facebook">
+					<Link href={facebookUrl} target='_blank' aria-label='Facebook'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='25px' height='24px'>
 							<path
 								fill='#FFF'
@@ -29,7 +29,7 @@ const SocialBar: React.FC = () => {
 							/>
 						</svg>
 					</Link>
-					<Link href={linkedInUrl} target='_blank' aria-label="LinkedIn">
+					<Link href={linkedInUrl} target='_blank' aria-label='LinkedIn'>
 						<svg xmlns='http://www.w3.org/2000/svg' width='25' height='24'>
 							<path
 								fill='#FFF'

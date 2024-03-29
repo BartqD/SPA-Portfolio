@@ -39,23 +39,7 @@
 		margin-bottom: 6.6rem;
 		line-height: 2.8rem;
 		font-size: 1.8rem;
-	}
-
-	&__contact {
-		font-size: 1.6rem;
-		font-weight: bold;
-		letter-spacing: 0.229rem;
-		line-height: 2.6rem;
-		text-decoration: none;
-		text-transform: uppercase;
-		color: var(--white);
-		border-bottom: 2px solid var(--green);
-		transition: color 0.3s ease-in;
-	}
-	&__contact:hover {
-		color: var(--green);
-	}
-	
+	}	
 }
 
 @media (min-width: 768px) {
