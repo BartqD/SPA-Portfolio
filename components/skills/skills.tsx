@@ -6,6 +6,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { SiNextdotjs } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { FaSass } from "react-icons/fa";
+import Image from "next/image";
 
 
 interface SkillProps {
@@ -26,6 +27,7 @@ const skills: SkillProps[] = [
 const SkillListSection: React.FC = () => {
   return (
     <section id='skills' className={classes.skills}>
+        <div className={classes['skills__ring']}><Image  src={'/images/pattern-rings.svg'} width={530} height={80} alt='rings pattern' /></div>
       <h2 className={classes['skills__title']}>My Skills:</h2>
       <article className={classes["skill-items"]}>
         {skills.map((skill, index) => (
@@ -40,3 +42,4 @@ const SkillListSection: React.FC = () => {
 }
 
 export default SkillListSection;
+

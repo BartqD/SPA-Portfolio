@@ -10,11 +10,10 @@ export default function Home() {
 			<header className={`${classes.header} ${classes.wrapper} `}>
 				<SocialBar></SocialBar>
 				<AboutMe></AboutMe>
-				<hr></hr>
 			</header>
 			<main className={`${classes.wrapper} `}>
 			<SkillListSection></SkillListSection>
-			
+
 			</main>
 			<footer>
 			</footer>
