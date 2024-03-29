@@ -1,38 +1,122 @@
 .projects {
 	position: relative;
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	margin: 2rem 1.4rem;
 
-&__heading{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	h2{
-		font-size: 4rem;
-	letter-spacing: -1.14px;
+	.wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 2.4rem;
+		width: 100%;
 	}
 
+	&__heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		font-weight: bold;
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
+	&__heading-title {
+		font-size: 4rem;
+		letter-spacing: -1.14px;
+	}
 }
 
-	
+.project-card {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-top: 4rem;
+
+	&__img {
+		border-radius: 5px;
+	}
+
+	&__title {
+		font-size: var(--heading-m);
+		margin-top: 2rem;
+	}
+
+	&__technologies {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.8rem;
+		margin-top: 1rem;
+		font-size: var(--body);
+	}
+	&__links {
+		display: none;
+	}
+
+	&__links--mobile {
+		display: flex;
+		align-items: center;
+		gap: 3rem;
+		margin-top: 1rem;
+		width: 100%;
+	}
 }
 
 @media (min-width: 768px) {
 	.projects {
 		margin: 6rem 3rem;
-
 	}
-
-	
 }
+
 @media (min-width: 992px) {
 	.projects {
 		margin: 10.4rem 16.5rem;
-	
+	}
+
+	.project-card {
+		position: relative;
+		margin-top: 4rem;
+
+		&__links--mobile {
+			display: none;
+		}
+
+		&__img-wrapper {
+			position: relative;
+			border-radius: 5px;
+			overflow: hidden;
+			cursor: pointer;
+
+			.project-card__img {
+				width: 54rem;
+				height: 40rem;
+				transition: filter 0.5s ease-in;
+			}
+
+			&--hovered .project-card__img {
+				filter: brightness(50%);
+			}
+
+			&:hover .project-card__links {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+
+		&__links {
+			position: absolute;
+			display: flex;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			gap: 3rem;
+			opacity: 0;
+			pointer-events: none;
+			transition: opacity 0.4s ease;
+		}
 	}
 }
 	

@@ -13,11 +13,10 @@ export default function Home() {
 				<AboutMe></AboutMe>
 			</header>
 			<main className={`${classes.wrapper} `}>
-			<SkillListSection></SkillListSection>
-			<ProjectListSection></ProjectListSection>
+				<SkillListSection />
+				<ProjectListSection />
 			</main>
-			<footer>
-			</footer>
+			<footer></footer>
 		</Fragment>
 	)
 }
