@@ -3,6 +3,7 @@ import classes from './page.module.scss'
 import SocialBar from '@/components/header/social-bar'
 import AboutMe from '@/components/header/about-me'
 import SkillListSection from '@/components/skills/skills'
+import ProjectListSection from '@/components/projects/projects'
 
 export default function Home() {
 	return (
@@ -12,11 +13,10 @@ export default function Home() {
 				<AboutMe></AboutMe>
 			</header>
 			<main className={`${classes.wrapper} `}>
-			<SkillListSection></SkillListSection>
-
+				<SkillListSection />
+				<ProjectListSection />
 			</main>
-			<footer>
-			</footer>
+			<footer></footer>
 		</Fragment>
 	)
 }
