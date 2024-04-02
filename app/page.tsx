@@ -4,6 +4,7 @@ import SocialBar from '@/components/header/social-bar'
 import AboutMe from '@/components/header/about-me'
 import SkillListSection from '@/components/sections/skills/skills'
 import ProjectListSection from '@/components/sections/projects/projects'
+import ContactSection from '@/components/sections/contact/contact'
 
 export default function Home() {
 	return (
@@ -15,6 +16,7 @@ export default function Home() {
 			<main className={`${classes.wrapper} `}>
 				<SkillListSection />
 				<ProjectListSection />
+				<ContactSection/>
 			</main>
 			<footer></footer>
 		</Fragment>

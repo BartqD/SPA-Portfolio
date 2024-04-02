@@ -73,7 +73,7 @@ const AboutMe: React.FC = () => {
 					</p>
 				</div>
 
-				<PageLink href={'#'}>contact me</PageLink>
+				<PageLink href={'#contact'}>contact me</PageLink>
 			</div>
 		</Fragment>
 	)
