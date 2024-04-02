@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import classes from './projects.module.scss'
 import Image from 'next/image'
-import PageLink from '../ui/link'
+import PageLink from '../../ui/link'
 
 interface ProjectData {
 	title: string

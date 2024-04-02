@@ -2,8 +2,8 @@ import { Fragment } from 'react'
 import classes from './page.module.scss'
 import SocialBar from '@/components/header/social-bar'
 import AboutMe from '@/components/header/about-me'
-import SkillListSection from '@/components/skills/skills'
-import ProjectListSection from '@/components/projects/projects'
+import SkillListSection from '@/components/sections/skills/skills'
+import ProjectListSection from '@/components/sections/projects/projects'
 
 export default function Home() {
 	return (
