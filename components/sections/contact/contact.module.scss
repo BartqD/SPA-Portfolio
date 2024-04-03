@@ -70,12 +70,16 @@
 				align-items: flex-start;
 				&__description {
 					text-align: left;
+					font-size: var(--body);
 				}
+				&__title {
+                    font-size: var(--heading-xl)
+                }
 			}
 		}
 
 		.wrapper {
-			padding: 8rem 16.1rem;
+			padding: 8rem 16.5rem;
 		}
 	}
 }

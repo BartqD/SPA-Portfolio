@@ -43,7 +43,6 @@
 		color: var(--white);
 		font-size: 1.6rem;
 		line-height: 2.6rem;
-		
 
 		&::placeholder {
 			text-transform: uppercase;
@@ -52,7 +51,7 @@
 
 		&:focus {
 			outline: none;
-			border: 1px solid var(--green);
+			border-bottom: 1px solid var(--green);
 		}
 	}
 
@@ -93,9 +92,9 @@
 			color: var(--green);
 		}
 		&:focus {
-            outline: none;
+			outline: none;
 			border: 1px solid var(--green);
-        }
+		}
 	}
 
 	&__alert {
@@ -111,5 +110,11 @@
 		font-size: 1.2rem;
 		letter-spacing: -0.17px;
 		color: #ff6f5b;
+	}
+}
+
+@media (min-width: 992px) {
+	.contact-form {
+		margin-top: 0;
 	}
 }
