@@ -26,9 +26,9 @@ const ContactForm: React.FC = () => {
 						aria-label='email'
 						className={classes['contact-form__input']}
 					/>
-					<IoAlertCircleOutline className={classes['contact-form__alert']}  />
+					{/* <IoAlertCircleOutline className={classes['contact-form__alert']}  /> */}
 				</div>
-				<p className={classes['contact-form__error-message']}>Sorry, invalid format here</p>
+				{/* <p className={classes['contact-form__error-message']}>Sorry, invalid format here</p>  */}
 			</div>
 			<div className={classes['contact-form__group']}>
 				<label htmlFor='message' className={classes['contact-form__label']}></label>

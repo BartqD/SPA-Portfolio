@@ -13,12 +13,14 @@ export default function Home() {
 				<SocialBar></SocialBar>
 				<AboutMe></AboutMe>
 			</header>
-			<main className={`${classes.wrapper} `}>
+			<main>
 				<SkillListSection />
 				<ProjectListSection />
 				<ContactSection/>
 			</main>
-			<footer></footer>
+			<footer className={classes.footer} >
+				<div className={classes.wrapper} ><SocialBar></SocialBar></div>
+			</footer>
 		</Fragment>
 	)
 }

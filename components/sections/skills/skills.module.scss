@@ -1,11 +1,38 @@
 .skills {
-	position: relative;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin: 2rem 1.4rem;
-	border-top: 1px solid var(--white);
-	border-bottom: 1px solid var(--white);
+	.wrapper {
+		position: relative;
+		margin: 0 auto;
+		padding: 2rem 1.4rem;
+		width: 100%;
+		max-width: 1440px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: calc(100% - 3.2rem);
+			height: 1px;
+			background-color: white;
+			content: '';
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: calc(100% - 3.2rem);
+			height: 1px;
+			background-color: white;
+			content: '';
+		}
+	}
 
 	&__title {
 		width: 100%;
@@ -16,8 +43,8 @@
 
 	&__ring {
 		position: absolute;
-		bottom: 0rem;
-		left: 18.7rem;
+		bottom: -2rem;
+		left: 20rem;
 		z-index: 1;
 	}
 }
@@ -62,10 +89,13 @@
 
 @media (min-width: 768px) {
 	.skills {
-		margin: 6rem 3rem;
+		.wrapper {
+			padding: 6rem 3rem;
+		}
 
 		&__ring {
-			left: 57.7rem;
+			bottom: 10rem;
+			left: 67.7rem;
 		}
 	}
 
@@ -91,7 +121,10 @@
 }
 @media (min-width: 992px) {
 	.skills {
-		margin: 10.4rem 16.5rem;
+		.wrapper {
+			padding: 1.6rem 16.5rem;
+		}
+
 		&__ring {
 			left: 65.7rem;
 		}
@@ -115,7 +148,8 @@
 @media (min-width: 1200px) {
 	.skills {
 		&__ring {
-			left: 80rem;
+			bottom: 15rem;
+			left: 127rem;
 		}
 	}
 }

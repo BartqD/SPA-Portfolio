@@ -4,7 +4,7 @@
 	align-items: center;
 	justify-content: center;
 	font-weight: bold;
-	margin: 2rem 11rem;
+	padding: 2rem 11rem;
 
 	&__name {
 		display: flex;
@@ -39,7 +39,7 @@
 		align-items: center;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		margin: 2.9rem;
+		padding: 2.9rem;
 		font-size: 3.2rem;
 
 		&__icons {
@@ -51,6 +51,6 @@
 
 @media (min-width: 992px) {
 	.social-bar {
-		margin: 3.9rem 16.5rem;
+		padding: 3.9rem 16.5rem;
 	}
 }
