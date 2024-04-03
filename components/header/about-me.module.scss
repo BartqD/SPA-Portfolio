@@ -1,10 +1,10 @@
 .about-me {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	margin: 4.9rem 1.6rem;
-	position: relative;
+	padding: 4.9rem 1.6rem;
 
 	&__rings {
 		position: absolute;
@@ -46,22 +46,22 @@
 	.about-me {
 		display: flex;
 		align-items: flex-start;
-		margin: 9rem 3rem;
+		padding: 6rem 3rem;
 		&__rings {
-			top: -1rem;
-			left: -32rem;
+			top: 4rem;
+			left: -43rem;
 		}
 
 		&__my-image {
 			position: absolute;
-			top: -20rem;
-			right: -3rem;
+			top: -14rem;
+			right: 0rem;
 			width: 32.2rem;
 			height: 60rem;
 		}
 
 		&__content {
-			width: 44.4rem;
+			width: 44.3rem;
 
 			h1 {
 				text-align: left;
@@ -84,16 +84,16 @@
 
 @media (min-width: 992px) {
 	.about-me {
-		margin: 12.7rem 16.5rem;
+		padding: 8.8rem 16.5rem;
 
 		&__rings {
-			top: -1rem;
+			top: 7rem;
 			left: -25rem;
 		}
 
 		&__my-image {
-			top: -21rem;
-			right: 0;
+			top: -15rem;
+			right: 16rem;
 			width: 44.5rem;
 			height: 72rem;
 		}

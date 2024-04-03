@@ -8,6 +8,11 @@
 	color: var(--white);
 	border-bottom: 2px solid var(--green);
 	transition: color 0.3s ease-in;
+
+	&:focus {
+		outline: none;
+		border: 1px solid var(--green);
+	}
 }
 .link:hover {
 	color: var(--green);

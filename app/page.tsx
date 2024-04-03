@@ -2,8 +2,9 @@ import { Fragment } from 'react'
 import classes from './page.module.scss'
 import SocialBar from '@/components/header/social-bar'
 import AboutMe from '@/components/header/about-me'
-import SkillListSection from '@/components/skills/skills'
-import ProjectListSection from '@/components/projects/projects'
+import SkillListSection from '@/components/sections/skills/skills'
+import ProjectListSection from '@/components/sections/projects/projects'
+import ContactSection from '@/components/sections/contact/contact'
 
 export default function Home() {
 	return (
@@ -12,11 +13,14 @@ export default function Home() {
 				<SocialBar></SocialBar>
 				<AboutMe></AboutMe>
 			</header>
-			<main className={`${classes.wrapper} `}>
+			<main>
 				<SkillListSection />
 				<ProjectListSection />
+				<ContactSection/>
 			</main>
-			<footer></footer>
+			<footer className={classes.footer} >
+				<div className={classes.wrapper} ><SocialBar></SocialBar></div>
+			</footer>
 		</Fragment>
 	)
 }

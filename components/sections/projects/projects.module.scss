@@ -4,14 +4,20 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	margin: 2rem 1.4rem;
 
 	.wrapper {
+		margin: 0 auto;
+		padding: 2rem 1.4rem;
+		width: 100%;
+		max-width: 1440px;
+	}
+
+	.card-wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-wrap: wrap;
-		gap: 2.4rem;
+		gap: 2.2rem;
 		width: 100%;
 	}
 
@@ -67,13 +73,17 @@
 
 @media (min-width: 768px) {
 	.projects {
-		margin: 6rem 3rem;
+		.wrapper {
+			padding: 6rem 3rem;
+		}
 	}
 }
 
 @media (min-width: 992px) {
 	.projects {
-		margin: 10.4rem 16.5rem;
+		.wrapper {
+			padding: 10.4rem 16.5rem;
+		}
 	}
 
 	.project-card {
@@ -97,7 +107,7 @@
 			}
 
 			&--hovered .project-card__img {
-				filter: brightness(50%);
+				filter: brightness(20%);
 			}
 
 			&:hover .project-card__links {
