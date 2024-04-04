@@ -1,6 +1,10 @@
+'use client'
+
 import React from 'react'
 import classes from './contact.module.scss'
 import ContactForm from './contact-form'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const ContactSection: React.FC = () => {
 	return (
@@ -14,6 +18,12 @@ const ContactSection: React.FC = () => {
 				</div>
 				<ContactForm />
 			</div>
+			<motion.div
+					animate={{ scale: [1, 1.1, 1] }}
+					transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+					className={classes['contact__rings']}>
+					<Image src={'/images/pattern-rings.svg'} width={530} height={80} alt='rings pattern' />
+				</motion.div>
 		</section>
 	)
 }

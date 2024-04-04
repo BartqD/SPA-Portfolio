@@ -1,8 +1,16 @@
 .contact {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: var(--dark-grey);
+
+	&__rings {
+		position: absolute;
+		bottom: 3rem;
+		left: -40rem;
+		z-index: 1;
+	}
 
 	.wrapper {
 		position: relative;
@@ -60,6 +68,13 @@
 
 @media (min-width: 992px) {
 	.contact {
+		&__rings {
+			position: absolute;
+			bottom: 10rem;
+			left: -30rem;
+			z-index: 1;
+		}
+
 		.contact-content {
 			display: flex;
 			flex-direction: row;
@@ -73,8 +88,8 @@
 					font-size: var(--body);
 				}
 				&__title {
-                    font-size: var(--heading-xl)
-                }
+					font-size: var(--heading-xl);
+				}
 			}
 		}
 
