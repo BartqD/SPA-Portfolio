@@ -21,8 +21,7 @@
 		}
 		a:focus {
 			outline: none;
-			border: 2px solid var(--green);
-			border-radius: 5px;
+			border-bottom: 2px solid var(--green);
 		}
 		svg path {
 			transition: fill 0.3s linear;

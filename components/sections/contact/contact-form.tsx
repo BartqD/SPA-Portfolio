@@ -6,18 +6,22 @@ const ContactForm: React.FC = () => {
 		<form className={classes['contact-form']}>
 			<div className={classes['contact-form__group']}>
 				<label htmlFor='name' className={classes['contact-form__label']}></label>
-				<input
-					type='text'
-					id='name'
-					name='name'
-					placeholder='name'
-					aria-label='name'
-					className={classes['contact-form__input']}
-				/>
+				<div className={classes['contact-form__group-alert']}>
+					<input
+						type='text'
+						id='name'
+						name='name'
+						placeholder='name'
+						aria-label='name'
+						className={classes['contact-form__input']}
+					/>
+					{/* <IoAlertCircleOutline className={classes['contact-form__alert']}  /> */}
+				</div>
+					{/* <p className={classes['contact-form__error-message']}>Sorry, invalid format here</p>  */}
 			</div>
 			<div className={classes['contact-form__group']}>
 				<label htmlFor='email' className={classes['contact-form__label']}></label>
-				<div className={classes['contact-form__email-group']}>
+				<div className={classes['contact-form__group-alert']}>
 					<input
 						type='email'
 						id='email'
@@ -32,16 +36,22 @@ const ContactForm: React.FC = () => {
 			</div>
 			<div className={classes['contact-form__group']}>
 				<label htmlFor='message' className={classes['contact-form__label']}></label>
-				<textarea
-					placeholder='message'
-					id='message'
-					name='message'
-					rows={6}
-					aria-label='Message'
-					className={`${classes['contact-form__textarea']} ${classes['contact-form__input']} ` }
-				/>
+				<div className={classes['contact-form__group-alert']}>
+					<textarea
+						placeholder='message'
+						id='message'
+						name='message'
+						rows={6}
+						aria-label='Message'
+						className={`${classes['contact-form__textarea']} ${classes['contact-form__input']} `}
+					/>
+					{/* <IoAlertCircleOutline className={classes['contact-form__alert']}  /> */}
+				</div>
+					{/* <p className={classes['contact-form__error-message']}>Sorry, invalid format here</p>  */}
 			</div>
-			<button type='submit' className={classes['contact-form__button']}>send message</button>
+			<button type='submit' className={classes['contact-form__button']}>
+				send message
+			</button>
 		</form>
 	)
 }

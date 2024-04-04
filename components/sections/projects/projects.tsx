@@ -42,7 +42,7 @@ const ProjectListSection: React.FC = () => {
 			<div className={classes.wrapper}>
 				<div className={classes['projects__heading']}>
 					<h2 className={classes['projects__heading-title']}>Projects</h2>
-					<PageLink href='#'>contact me</PageLink>
+					<PageLink href={'#contact'}>contact me</PageLink>
 				</div>
 				<div className={classes['card-wrapper']}>
 					{projects.map((project, index) => (
@@ -50,6 +50,8 @@ const ProjectListSection: React.FC = () => {
 							<div
 								onMouseEnter={() => setHoveredIndex(index)}
 								onMouseLeave={() => setHoveredIndex(null)}
+								onFocus={() => setHoveredIndex(index)}
+								onBlur={() => setHoveredIndex(null)}
 								className={`${classes['project-card__img-wrapper']} ${
 									hoveredIndex === index ? classes['project-card__img-wrapper--hovered'] : ''
 								}`}>
