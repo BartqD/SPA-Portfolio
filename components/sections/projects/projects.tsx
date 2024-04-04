@@ -50,6 +50,8 @@ const ProjectListSection: React.FC = () => {
 							<div
 								onMouseEnter={() => setHoveredIndex(index)}
 								onMouseLeave={() => setHoveredIndex(null)}
+								onFocus={() => setHoveredIndex(index)}
+								onBlur={() => setHoveredIndex(null)}
 								className={`${classes['project-card__img-wrapper']} ${
 									hoveredIndex === index ? classes['project-card__img-wrapper--hovered'] : ''
 								}`}>

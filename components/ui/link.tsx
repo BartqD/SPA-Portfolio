@@ -5,11 +5,12 @@ import classes from './link.module.scss'
 interface PageLinkProps {
 	href: string
 	children: React.ReactNode
+	tabIndex?: number
 }
 
-const PageLink: React.FC<PageLinkProps> = ({href, children}) => {
+const PageLink: React.FC<PageLinkProps> = ({href, children,tabIndex}) => {
 	return (
-		<Link className={classes.link} href={href}>
+		<Link className={classes.link} tabIndex={tabIndex} href={href}>
 			{children}
 		</Link>
 	)
