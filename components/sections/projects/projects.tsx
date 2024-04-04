@@ -42,7 +42,7 @@ const ProjectListSection: React.FC = () => {
 			<div className={classes.wrapper}>
 				<div className={classes['projects__heading']}>
 					<h2 className={classes['projects__heading-title']}>Projects</h2>
-					<PageLink href='#'>contact me</PageLink>
+					<PageLink href={'#contact'}>contact me</PageLink>
 				</div>
 				<div className={classes['card-wrapper']}>
 					{projects.map((project, index) => (
