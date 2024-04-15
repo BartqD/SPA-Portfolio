@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 	description: 'Welcome to Bartosz Drozdek portfolio website. Explore my projects and learn more about me.',
 }
 
-const spaceGrotesk = Space_Grotesk({ weight: ['400','600', '700'], subsets: ['latin'] })
+const spaceGrotesk = Space_Grotesk({ weight: ['400', '600', '700'], subsets: ['latin'] })
 
 export default function RootLayout({
 	children,
@@ -16,7 +16,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={spaceGrotesk.className}>{children}</body>
+			<body className={spaceGrotesk.className}>
+				{children}
+				<div id='notifications'></div>
+			</body>
 		</html>
 	)
 }

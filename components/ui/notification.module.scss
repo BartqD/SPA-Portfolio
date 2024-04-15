@@ -1,0 +1,52 @@
+.notification {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10rem;
+	width: calc(100% - 4rem);
+	bottom: 10rem;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 6rem 3rem;
+	color: var(--dark-grey);
+	background-color: var(--white);
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 6px;
+	z-index: 10;
+	animation: showNotification 1s ease-in-out;
+}
+
+.notification h2 {
+	font-size: var(--heading-m);
+}
+
+.notification p {
+	font-size: 1.4rem;
+}
+
+.success {
+	background-color: var(--green);
+	color: var(--white);
+}
+
+.error {
+	background-color: var(--error);
+	color: var(--white);
+}
+
+@keyframes showNotification {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (min-width: 768px) {
+	.notification {
+		max-width: 800px;
+	}
+}

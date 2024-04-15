@@ -21,6 +21,7 @@ export default function Home() {
 			<footer className={classes.footer} >
 				<div className={classes.wrapper} ><SocialBar></SocialBar></div>
 			</footer>
+			
 		</Fragment>
 	)
 }
