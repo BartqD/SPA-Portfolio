@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Link from 'next/link'
 import classes from './link.module.scss'
+
 
 interface PageLinkProps {
 	href: string
@@ -9,8 +10,17 @@ interface PageLinkProps {
 }
 
 const PageLink: React.FC<PageLinkProps> = ({href, children,tabIndex}) => {
+	const linkRef = useRef<HTMLAnchorElement>(null);
+
+	const handleClick = () => {
+        if (linkRef.current) {
+            linkRef.current.blur();
+        }
+    };
+
+
 	return (
-		<Link className={classes.link} tabIndex={tabIndex} href={href}>
+		<Link className={classes.link} ref={linkRef} onClick={handleClick} tabIndex={tabIndex} href={href}>
 			{children}
 		</Link>
 	)

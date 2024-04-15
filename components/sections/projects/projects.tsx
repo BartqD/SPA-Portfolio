@@ -1,9 +1,10 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import classes from './projects.module.scss'
 import Image from 'next/image'
 import PageLink from '../../ui/link'
+import { motion } from 'framer-motion'
 
 interface ProjectData {
 	title: string
@@ -37,6 +38,20 @@ const projects: ProjectData[] = [
 const ProjectListSection: React.FC = () => {
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
+	const fadeInAnimationVariant = {
+		initial: {
+			opacity: 0,
+			scale: 0.5,
+		},
+		animate: (index: number) => ({
+			opacity: 1,
+			scale: 1,
+			transition: {
+				delay: 0.3 * index,
+			},
+		}),
+	}
+
 	return (
 		<section id='projects' className={classes.projects}>
 			<div className={classes.wrapper}>
@@ -46,12 +61,23 @@ const ProjectListSection: React.FC = () => {
 				</div>
 				<div className={classes['card-wrapper']}>
 					{projects.map((project, index) => (
-						<article className={classes['project-card']} key={index}>
+						<motion.article
+							variants={fadeInAnimationVariant}
+							initial='initial'
+							whileInView='animate'
+							viewport={{
+								once: true,
+							}}
+							custom={index}
+							className={classes['project-card']}
+							key={index}>
 							<div
 								onMouseEnter={() => setHoveredIndex(index)}
 								onMouseLeave={() => setHoveredIndex(null)}
 								onFocus={() => setHoveredIndex(index)}
-								onBlur={() => setHoveredIndex(null)}
+								onBlur={() => {
+									setHoveredIndex(null)
+								}}
 								className={`${classes['project-card__img-wrapper']} ${
 									hoveredIndex === index ? classes['project-card__img-wrapper--hovered'] : ''
 								}`}>
@@ -79,7 +105,7 @@ const ProjectListSection: React.FC = () => {
 								<PageLink href='#'>view project</PageLink>
 								<PageLink href='#'>view code</PageLink>
 							</div>
-						</article>
+						</motion.article>
 					))}
 				</div>
 			</div>
