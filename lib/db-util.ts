@@ -1,15 +1,16 @@
 import { MongoClient } from 'mongodb'
 
 export async function connectDatabase() {
-	// if (!process.env.mongodb_username || !process.env.mongodb_password) {
-	// 	throw new Error('MongoDB username or password is not defined in environment variables.')
-	// }
+	
+	if (!process.env.MONGODB_USERNAME || !process.env.MONGODB_PASSWORD) {
+		throw new Error('MongoDB username or password is not defined in environment variables.')
+	}
 
-	const username = encodeURIComponent(process.env.mongodb_username!)
-	const password = encodeURIComponent(process.env.mongodb_password!)
+	const username = encodeURIComponent(process.env.MONGODB_USERNAME)
+	const password = encodeURIComponent(process.env.MONGODB_PASSWORD)
 
-	console.log(process.env.mongodb_username)
-	console.log(process.env.mongodb_password)
+	console.log(process.env.MONGODB_USERNAME)
+	console.log(process.env.MONGODB_PASSWORD)
 	
 	const uri = `mongodb+srv://${username}:${password}@cluster0.lzl7hjs.mongodb.net/?retryWrites=true&w=majority`
 
