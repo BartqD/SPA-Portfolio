@@ -9,7 +9,7 @@
 	&__rings {
 		position: absolute;
 		top: -0.5rem;
-		left: -40rem;
+		right: calc(100% - 15rem);
 		z-index: 1;
 	}
 
@@ -49,7 +49,6 @@
 		padding: 6rem 3rem;
 		&__rings {
 			top: 4rem;
-			left: -43rem;
 		}
 
 		&__my-image {
@@ -88,7 +87,6 @@
 
 		&__rings {
 			top: 7rem;
-			left: -25rem;
 		}
 
 		&__my-image {
@@ -109,6 +107,16 @@
 		&__description {
 			margin-top: 4.3rem;
 			margin-bottom: 6.6rem;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.about-me {
+		
+
+		&__rings {
+			right: calc(100% - 25rem)
 		}
 	}
 }

@@ -17,13 +17,13 @@ const ContactSection: React.FC = () => {
 					</p>
 				</div>
 				<ContactForm />
-			</div>
 			<motion.div
 					animate={{ scale: [1, 1.1, 1] }}
 					transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
 					className={classes['contact__rings']}>
 					<Image src={'/images/pattern-rings.svg'} width={530} height={80} alt='rings pattern' />
 				</motion.div>
+			</div>
 		</section>
 	)
 }
