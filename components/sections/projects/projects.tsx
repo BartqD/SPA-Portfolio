@@ -47,7 +47,7 @@ const ProjectListSection: React.FC = () => {
 			opacity: 1,
 			scale: 1,
 			transition: {
-				delay: 0.3 * index,
+				delay: 0.2 * index,
 			},
 		}),
 	}

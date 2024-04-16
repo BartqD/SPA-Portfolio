@@ -14,14 +14,15 @@ export default function Home() {
 				<AboutMe></AboutMe>
 			</header>
 			<main>
-				<SkillListSection />
-				<ProjectListSection />
-				<ContactSection/>
+					<SkillListSection />
+					<ProjectListSection />
+					<ContactSection />
 			</main>
-			<footer className={classes.footer} >
-				<div className={classes.wrapper} ><SocialBar></SocialBar></div>
+			<footer className={classes.footer}>
+				<div className={classes.wrapper}>
+					<SocialBar></SocialBar>
+				</div>
 			</footer>
-			
 		</Fragment>
 	)
 }

@@ -43,7 +43,7 @@
 	&__ring {
 		position: absolute;
 		bottom: -2rem;
-		left: 20rem;
+		left: calc(100% - 15rem);
 		z-index: 1;
 	}
 }
@@ -94,7 +94,6 @@
 
 		&__ring {
 			bottom: 10rem;
-			left: 67.7rem;
 		}
 	}
 
@@ -125,7 +124,7 @@
 		}
 
 		&__ring {
-			left: 65.7rem;
+			bottom: 5rem;
 		}
 	}
 
@@ -147,8 +146,7 @@
 @media (min-width: 1200px) {
 	.skills {
 		&__ring {
-			bottom: 5rem;
-			left: 108rem;
+			right: calc(100% - 25rem);
 		}
 	}
 }
