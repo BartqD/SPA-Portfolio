@@ -18,11 +18,11 @@
 }
 
 .notification h2 {
-	font-size: var(--heading-m);
+	font-size: var(--body);
 }
 
 .notification p {
-	font-size: 1.4rem;
+	font-size: 1.3rem;
 }
 
 .success {
@@ -48,5 +48,12 @@
 @media (min-width: 768px) {
 	.notification {
 		max-width: 800px;
+
+		h2{
+			font-size: var(--heading-m);
+		}
+		p{
+            font-size: 1.4rem;
+        }
 	}
 }
