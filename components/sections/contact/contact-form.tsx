@@ -37,6 +37,9 @@ const ContactForm: React.FC = () => {
 	const [enteredEmail, setEnteredEmail] = useState<string>('')
 	const [enteredName, setEnteredName] = useState<string>('')
 	const [enteredMessage, setEnteredMessage] = useState<string>('')
+	const [emailError, setEmailError] = useState<string | null>()
+	const [nameError, setNameError] = useState<string | null>()
+	const [messageError, setMessageError] = useState<string | null>()
 	const [errorMessage, setErrorMessage] = useState<string | null>()
 	const [requestStatus, setRequestStatus] = useState<'success' | 'error' | 'pending' | null>()
 
@@ -44,7 +47,10 @@ const ContactForm: React.FC = () => {
 		if (requestStatus === 'success' || requestStatus === 'error') {
 			const timer = setTimeout(() => {
 				setRequestStatus(null)
+				setMessageError(null)
 				setErrorMessage(null)
+				setEmailError(null)
+				setNameError(null)
 			}, 3000)
 			return () => {
 				clearTimeout(timer)
@@ -52,25 +58,53 @@ const ContactForm: React.FC = () => {
 		}
 	}, [requestStatus])
 
+	const validateEmail = (email: string) => {
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+		return emailRegex.test(email)
+	}
+
 	async function sendMessageHandler(event: React.FormEvent) {
 		event.preventDefault()
-		setRequestStatus('pending')
-		const contact: Contact = {
-			email: enteredEmail,
-			name: enteredName,
-			message: enteredMessage,
+
+		if (!enteredEmail) {
+			setEmailError('Email field is required')
+		} else if (!validateEmail(enteredEmail)) {
+			setEmailError('Invalid email format')
+		} else {
+			setEmailError(null)
 		}
 
-		try {
-			await sendContactData(contact)
-			setRequestStatus('success')
-			setEnteredEmail('')
-			setEnteredName('')
-			setEnteredMessage('')
-		} catch (error) {
-			setRequestStatus('error')
-			setErrorMessage((error as Error).message || 'Something went wrong!')
-			return
+		if (!enteredName) {
+			setNameError('Name field is required')
+		} else {
+			setNameError(null)
+		}
+
+		if (!enteredMessage) {
+			setMessageError('Message field is required')
+		} else {
+			setMessageError(null)
+		}
+
+		if (enteredEmail && enteredName && enteredMessage && !emailError && !nameError && !errorMessage) {
+			setRequestStatus('pending')
+			const contact: Contact = {
+				email: enteredEmail,
+				name: enteredName,
+				message: enteredMessage,
+			}
+
+			try {
+				await sendContactData(contact)
+				setRequestStatus('success')
+				setEnteredEmail('')
+				setEnteredName('')
+				setEnteredMessage('')
+			} catch (error) {
+				setRequestStatus('error')
+				setErrorMessage((error as Error).message || 'Something went wrong!')
+				return
+			}
 		}
 	}
 
@@ -100,6 +134,8 @@ const ContactForm: React.FC = () => {
 		}
 	}
 
+	const errorIcon = <IoAlertCircleOutline className={classes['contact-form__alert']} />
+
 	return (
 		<Fragment>
 			<form onSubmit={sendMessageHandler} className={classes['contact-form']}>
@@ -113,13 +149,12 @@ const ContactForm: React.FC = () => {
 							placeholder='name'
 							aria-label='name'
 							className={classes['contact-form__input']}
-							required
 							value={enteredName}
 							onChange={e => setEnteredName(e.target.value)}
 						/>
-						{/* <IoAlertCircleOutline className={classes['contact-form__alert']}  /> */}
+						{nameError && errorIcon}
 					</div>
-					{/* <p className={classes['contact-form__error-message']}>Sorry, invalid format here</p>  */}
+					{nameError && <p className={classes['contact-form__error-message']}>{nameError}</p>}
 				</div>
 				<div className={classes['contact-form__group']}>
 					<label htmlFor='email' className={classes['contact-form__label']}></label>
@@ -131,13 +166,12 @@ const ContactForm: React.FC = () => {
 							placeholder='email'
 							aria-label='email'
 							className={classes['contact-form__input']}
-							required
 							value={enteredEmail}
 							onChange={e => setEnteredEmail(e.target.value)}
 						/>
-						{/* <IoAlertCircleOutline className={classes['contact-form__alert']}  /> */}
+						{emailError && errorIcon}
 					</div>
-					{/* <p className={classes['contact-form__error-message']}>Sorry, invalid format here</p>  */}
+					{emailError && <p className={classes['contact-form__error-message']}>{emailError}</p>}
 				</div>
 				<div className={classes['contact-form__group']}>
 					<label htmlFor='message' className={classes['contact-form__label']}></label>
@@ -151,11 +185,10 @@ const ContactForm: React.FC = () => {
 							className={`${classes['contact-form__textarea']} ${classes['contact-form__input']} `}
 							value={enteredMessage}
 							onChange={e => setEnteredMessage(e.target.value)}
-							required
 						/>
-						{/* <IoAlertCircleOutline className={classes['contact-form__alert']}  /> */}
+						{messageError && errorIcon}
 					</div>
-					{/* <p className={classes['contact-form__error-message']}>Sorry, invalid format here</p>  */}
+					{messageError && <p className={classes['contact-form__error-message']}>{messageError}</p>}
 				</div>
 				<button type='submit' className={classes['contact-form__button']}>
 					send message
