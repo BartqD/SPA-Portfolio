@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import classes from './projects.module.scss'
 import Image from 'next/image'
 import PageLink from '../../ui/link'
@@ -86,7 +86,7 @@ const ProjectListSection: React.FC = () => {
 									src={project.imageUrl}
 									alt={project.title}
 									width={343}
-									height={253}
+									height={215}
 								/>
 								<div className={classes['project-card__links']}>
 									<PageLink href='#'>view project</PageLink>
