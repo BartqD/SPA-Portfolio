@@ -43,20 +43,20 @@ const ContactForm: React.FC = () => {
 	const [errorMessage, setErrorMessage] = useState<string | null>()
 	const [requestStatus, setRequestStatus] = useState<'success' | 'error' | 'pending' | null>()
 
-	// useEffect(() => {
-	// 	if (requestStatus === 'success' || requestStatus === 'error') {
-	// 		const timer = setTimeout(() => {
-	// 			setRequestStatus(null)
-	// 			setMessageError(null)
-	// 			setErrorMessage(null)
-	// 			setEmailError(null)
-	// 			setNameError(null)
-	// 		}, 3000)
-	// 		return () => {
-	// 			clearTimeout(timer)
-	// 		}
-	// 	}
-	// }, [requestStatus])
+	useEffect(() => {
+		if (requestStatus === 'success' || requestStatus === 'error') {
+			const timer = setTimeout(() => {
+				setRequestStatus(null)
+				setMessageError(null)
+				setErrorMessage(null)
+				setEmailError(null)
+				setNameError(null)
+			}, 3000)
+			return () => {
+				clearTimeout(timer)
+			}
+		}
+	}, [requestStatus])
 
 	const validateEmail = (email: string) => {
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
