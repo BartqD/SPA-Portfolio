@@ -69,7 +69,7 @@ const AboutMe: React.FC = () => {
 						<motion.span variants={letterVariants}>k</motion.span>
 					</motion.h1>
 					<p className={classes['about-me__description']}>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, fugit?
+					Over the past year, I have focused on learning front-end development. In my projects, I utilize technologies such as React, Next.js, and TypeScript, enabling me to create interactive and modern web applications. I have experience working in teams as well as solving problems independently. I am seeking an internship or full-time position as a Junior Frontend Developer. I am always open to learning and tackling new challenges. Feel free to use the contact form provided.
 					</p>
 				</div>
 
