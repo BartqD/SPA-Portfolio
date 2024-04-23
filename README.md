@@ -62,6 +62,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [MongoDB](https://www.mongodb.com) - Database
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
 
 ## Author
 
