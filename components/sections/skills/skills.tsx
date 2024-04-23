@@ -8,6 +8,8 @@ import { IoLogoJavascript } from 'react-icons/io5'
 import { SiNextdotjs } from 'react-icons/si'
 import { FaReact } from 'react-icons/fa'
 import { FaSass } from 'react-icons/fa'
+import { SiFramer } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
@@ -20,10 +22,12 @@ interface SkillProps {
 const skills: SkillProps[] = [
 	{ name: 'HTML', experience: 'Experience', icon: <FaHtml5 /> },
 	{ name: 'CSS', experience: 'Experience', icon: <FaCss3Alt /> },
-	{ name: 'Javascript', experience: 'Experience', icon: <IoLogoJavascript /> },
-	{ name: 'NextJs', experience: 'Experience', icon: <SiNextdotjs /> },
-	{ name: 'React', experience: 'Experience', icon: <FaReact /> },
 	{ name: 'Sass', experience: 'Experience', icon: <FaSass /> },
+	{ name: 'Javascript', experience: 'Experience', icon: <IoLogoJavascript /> },
+	{ name: 'TypeScript', experience: 'Experience', icon: <SiTypescript /> },
+	{ name: 'React', experience: 'Experience', icon: <FaReact /> },
+	{ name: 'NextJs', experience: 'Experience', icon: <SiNextdotjs /> },
+	{ name: 'FramerMotion', experience: 'Experience', icon: <SiFramer /> },
 ]
 
 const SkillListSection: React.FC = () => {

@@ -84,6 +84,13 @@
 		letter-spacing: -1px;
 		margin-bottom: 1rem;
 	}
+	&__item {
+		transition: transform .3s linear;
+	}
+
+	&__item:hover {
+		transform: scale(1.1);
+	}
 }
 
 @media (min-width: 768px) {
