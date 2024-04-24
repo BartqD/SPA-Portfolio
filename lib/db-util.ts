@@ -8,9 +8,6 @@ export async function connectDatabase() {
 
 	const username = encodeURIComponent(process.env.MONGODB_USERNAME)
 	const password = encodeURIComponent(process.env.MONGODB_PASSWORD)
-
-	console.log(process.env.MONGODB_USERNAME)
-	console.log(process.env.MONGODB_PASSWORD)
 	
 	const uri = `mongodb+srv://${username}:${password}@cluster0.lzl7hjs.mongodb.net/?retryWrites=true&w=majority`
 
