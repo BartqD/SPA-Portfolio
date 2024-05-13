@@ -20,7 +20,7 @@ const PageLink: React.FC<PageLinkProps> = ({href, children,tabIndex}) => {
 
 
 	return (
-		<Link className={classes.link} ref={linkRef} onClick={handleClick} tabIndex={tabIndex} href={href}>
+		<Link className={classes.link} ref={linkRef} target='blank' onClick={handleClick} tabIndex={tabIndex} href={href}>
 			{children}
 		</Link>
 	)

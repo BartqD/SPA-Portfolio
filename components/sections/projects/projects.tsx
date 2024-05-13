@@ -10,28 +10,17 @@ interface ProjectData {
 	title: string
 	technologies: string[]
 	imageUrl: string
+	projectLink: string
+	codeLink: string
 }
 
 const projects: ProjectData[] = [
 	{
-		title: 'DESIGN PORTFOLIO',
-		technologies: ['HTML', ' CSS'],
-		imageUrl: '/images/Desktop.png',
-	},
-	{
-		title: 'DESIGN PORTFOLIO',
-		technologies: ['HTML', ' CSS'],
-		imageUrl: '/images/Desktop.png',
-	},
-	{
-		title: 'DESIGN PORTFOLIO',
-		technologies: ['HTML', ' CSS'],
-		imageUrl: '/images/Desktop.png',
-	},
-	{
-		title: 'DESIGN PORTFOLIO',
-		technologies: ['HTML', ' CSS'],
-		imageUrl: '/images/Desktop.png',
+		title: 'COFFEEROASTERS',
+		technologies: ['HTML', 'CSS', 'TAILWIND', 'NEXTJS', 'TYPESCRIPT', 'FRAMERMOTION'],
+		imageUrl: '/images/Coffeeroasters.png',
+		projectLink: 'https://coffeeroasters-chi.vercel.app/',
+		codeLink: 'https://github.com/BartqD/Coffeeroasters',
 	},
 ]
 
@@ -85,12 +74,11 @@ const ProjectListSection: React.FC = () => {
 									className={classes['project-card__img']}
 									src={project.imageUrl}
 									alt={project.title}
-									width={343}
-									height={215}
+									fill
 								/>
 								<div className={classes['project-card__links']}>
-									<PageLink href='#'>view project</PageLink>
-									<PageLink href='#'>view code</PageLink>
+									<PageLink href={project.projectLink}>view project</PageLink>
+									<PageLink href={project.codeLink}>view code</PageLink>
 								</div>
 							</div>
 							<h2 className={classes['project-card__title']}>{project.title}</h2>
@@ -102,8 +90,8 @@ const ProjectListSection: React.FC = () => {
 								))}
 							</div>
 							<div className={classes['project-card__links--mobile']}>
-								<PageLink href='#'>view project</PageLink>
-								<PageLink href='#'>view code</PageLink>
+								<PageLink href={project.projectLink}>view project</PageLink>
+								<PageLink href={project.codeLink}>view code</PageLink>
 							</div>
 						</motion.article>
 					))}
