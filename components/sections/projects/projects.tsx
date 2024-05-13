@@ -22,6 +22,13 @@ const projects: ProjectData[] = [
 		projectLink: 'https://coffeeroasters-chi.vercel.app/',
 		codeLink: 'https://github.com/BartqD/Coffeeroasters',
 	},
+	{
+		title: 'FOREST',
+		technologies: ['HTML', 'CSS (BEM)', 'JS','GULP'],
+		imageUrl: '/images/Forest.png',
+		projectLink: 'https://bartqd.github.io',
+		codeLink: 'https://github.com/BartqD/BartqD.github.io',
+	},
 ]
 
 const ProjectListSection: React.FC = () => {
